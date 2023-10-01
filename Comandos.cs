@@ -71,7 +71,6 @@ namespace zoologico
 
                 List<Veterinario> veterinarios4 = DALZoologico.GetVeterinariosList();
 
-                // Exibir o cabeçalho da tabela
                 Console.WriteLine("{0,-10} {1}", "ID", "Nome");
                 Console.WriteLine(new string('-', 22));
 
@@ -111,6 +110,5 @@ namespace zoologico
             }
         }
 
-        // ... (métodos para visitantes, administradores e animais seguem o mesmo padrão)
     }
 }

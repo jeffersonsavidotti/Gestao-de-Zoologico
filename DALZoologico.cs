@@ -61,7 +61,6 @@ namespace zoologico
                     cmd.CommandText = "SELECT * FROM veterinarios";
                     using (var reader = cmd.ExecuteReader())
                     {
-                        // Comentários desativados para evitar a impressão na tela
                         while (reader.Read())
                         {
                             Veterinario veterinario = new Veterinario(Convert.ToInt32(reader["id"]), reader["nome"].ToString());
@@ -770,8 +769,5 @@ namespace zoologico
                 Console.WriteLine("Erro: " + ex.Message);
             }
         }
-
-
-
     }
 }
