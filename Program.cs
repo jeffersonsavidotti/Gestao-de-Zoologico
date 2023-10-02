@@ -37,7 +37,7 @@ namespace zoologico
             try
             {
                 // Criando uma nova instância de Comandos
-                Comandos comandos = new Comandos();
+                Consultas comandos = new Consultas();
             }
             catch (Exception ex)
             {
@@ -56,7 +56,7 @@ namespace zoologico
                 Console.WriteLine("4 - Administradores");
                 Console.WriteLine("0 - Sair");
 
-                escolhainicial = Convert.ToInt32(Console.ReadLine());
+                escolhainicial = int.Parse(Console.ReadLine());
 
                 switch (escolhainicial)
                 {
@@ -66,36 +66,49 @@ namespace zoologico
 
                         while (escolha != 0)
                         {
+                            Console.Clear();
                             Console.WriteLine("Escolha uma operação:");
-                            Console.WriteLine("5 - Inserir Veterinário");
-                            Console.WriteLine("6 - Deletar Veterinário");
-                            Console.WriteLine("7 - Atualizar Nome do Veterinário");
-                            Console.WriteLine("8 - Consultar Nome do Veterinário");
+                            Console.WriteLine("1 - Inserir Veterinário");
+                            Console.WriteLine("2 - Deletar Veterinário");
+                            Console.WriteLine("3 - Atualizar Nome do Veterinário");
+                            Console.WriteLine("4 - Consultar Nome do Veterinário");
+                            Console.WriteLine("5 - Exibir Tabela Veterinário");
                             Console.WriteLine("0 - Voltar");
 
-                            escolha = Convert.ToInt32(Console.ReadLine());
+                            escolha = int.Parse(Console.ReadLine());
 
                             switch (escolha)
                             {
-                                case 5:
+                                case 1:
+                                    Console.Clear();
                                     // Inserção de dados de veterinário
                                     DALZoologico.InserirVeterinario();
-                                    Comandos.InserirVet();
+                                    Console.ReadKey();
                                     break;
-                                case 6:
+                                case 2:
+                                    Console.Clear();
                                     // Deleção de dados de veterinário
                                     DALZoologico.DeletarVeterinario();
-                                    //Comandos.DeletarVet();
+                                    Console.ReadKey();
                                     break;
-                                case 7:
+                                case 3:
+                                    Console.Clear();
                                     // Atualização de nome de veterinário
                                     DALZoologico.AtualizarNomeVeterinario();
-                                    //Comandos.AtualizarVet();
+                                    Console.ReadKey();
                                     break;
-                                case 8:
+                                case 4:
+                                    Console.Clear();    
                                     // Consulta de veterinários com parâmetros
                                     DALZoologico.GetVeterinariosComParametro();
-                                    //Comandos.ConsultarVet();
+                                    Console.ReadKey();
+                                    break;
+                                case 5:
+                                    Console.Clear();
+                                    // Exibir tabela veterinários com parâmetros
+                                    Consultas.ConsultarVet();
+                                    Console.WriteLine("");
+                                    Console.ReadKey();
                                     break;
                                 case 0:
                                     break;
@@ -112,36 +125,49 @@ namespace zoologico
 
                         while (escolha1 != 0)
                         {
+                            Console.Clear();
                             Console.WriteLine("Escolha uma operação:");
-                            Console.WriteLine("9 - Inserir Animal");
-                            Console.WriteLine("10 - Deletar Animal");
-                            Console.WriteLine("11 - Atualizar Nome do Animal");
-                            Console.WriteLine("12 - Consultar Nome do Animal");
+                            Console.WriteLine("1 - Inserir Animal");
+                            Console.WriteLine("2 - Deletar Animal");
+                            Console.WriteLine("3 - Atualizar Nome do Animal");
+                            Console.WriteLine("4 - Consultar Nome do Animal");
+                            Console.WriteLine("5 - Exibir tabela Animal");
                             Console.WriteLine("0 - Voltar");
 
-                            escolha1 = Convert.ToInt32(Console.ReadLine());
+                            escolha1 = int.Parse(Console.ReadLine());
 
                             switch (escolha1)
                             {
-                                case 9:
+                                case 1:
+                                    Console.Clear();
                                     // Inserção de dados de animal
                                     DALZoologico.InserirAnimal();
-                                    //Comandos.InserirVet();
+                                    Console.ReadKey();
                                     break;
-                                case 10:
+                                case 2:
+                                    Console.Clear();
                                     // Deleção de dados de animal
                                     DALZoologico.DeletarAnimal();
-                                    //Comandos.DeletarVet();
+                                    Console.ReadKey();
                                     break;
-                                case 11:
+                                case 3:
+                                    Console.Clear();
                                     // Atualização de nome de animal
                                     DALZoologico.AtualizarNomeAnimal();
-                                    //Comandos.AtualizarVet();
+                                    Console.ReadKey();
                                     break;
-                                case 12:
+                                case 4:
+                                    Console.Clear();
                                     // Consulta de animais com parâmetros
                                     DALZoologico.GetAnimaisComParametro();
-                                    //Comandos.ConsultarVet();
+                                    Console.ReadKey();
+                                    break;
+                                case 5:
+                                    Console.Clear();
+                                    // Exibir tabela animais com parâmetros
+                                    Consultas.Consultar_Animal();
+                                    Console.WriteLine("");
+                                    Console.ReadKey();
                                     break;
                                 case 0:
                                     break;
@@ -158,36 +184,49 @@ namespace zoologico
 
                         while (escolha2 != 0)
                         {
+                            Console.Clear();
                             Console.WriteLine("Escolha uma operação:");
-                            Console.WriteLine("13 - Inserir Visitante");
-                            Console.WriteLine("14 - Deletar Visitante");
-                            Console.WriteLine("15 - Atualizar Nome do Visitante");
-                            Console.WriteLine("16 - Consultar Nome do Visitante");
+                            Console.WriteLine("1 - Inserir Visitante");
+                            Console.WriteLine("2 - Deletar Visitante");
+                            Console.WriteLine("3 - Atualizar Nome do Visitante");
+                            Console.WriteLine("4 - Consultar Nome do Visitante");
+                            Console.WriteLine("5 - Exibir tabela de Visitantes");
                             Console.WriteLine("0 - Voltar");
 
-                            escolha2 = Convert.ToInt32(Console.ReadLine());
+                            escolha2 = int.Parse(Console.ReadLine());
 
                             switch (escolha2)
                             {
-                                case 13:
+                                case 1:
+                                    Console.Clear();
                                     // Inserção de dados de visitante
                                     DALZoologico.InserirVisitante();
-                                    //Comandos.InserirVis();
+                                    Console.ReadKey();
                                     break;
-                                case 14:
+                                case 2:
+                                    Console.Clear();
                                     // Deleção de dados de visitante
                                     DALZoologico.DeletarVisitante();
-                                    //Comandos.DeletarVis();
+                                    Console.ReadKey();
                                     break;
-                                case 15:
+                                case 3:
+                                    Console.Clear();
                                     // Atualização de nome de visitante
                                     DALZoologico.AtualizarNomeVisitante();
-                                    //Comandos.AtualizarVis();
+                                    Console.ReadKey();
                                     break;
-                                case 16:
+                                case 4:
+                                    Console.Clear();
                                     // Consulta de visitantes com parâmetros
                                     DALZoologico.GetVisitantesComParametro();
-                                    //Comandos.ConsultarVis();
+                                    Console.ReadKey();
+                                    break;
+                                case 5:
+                                    Console.Clear();
+                                    // Exibir tabela visitantes com parâmetros
+                                    Consultas.ConsultarVis();
+                                    Console.WriteLine("");
+                                    Console.ReadKey();
                                     break;
                                 case 0:
                                     break;
@@ -204,36 +243,49 @@ namespace zoologico
 
                         while (escolha3 != 0)
                         {
+                            Console.Clear();
                             Console.WriteLine("Escolha uma operação:");
-                            Console.WriteLine("17 - Inserir Administrador");
-                            Console.WriteLine("18 - Deletar Administrador");
-                            Console.WriteLine("19 - Atualizar Nome do Administrador");
-                            Console.WriteLine("20 - Consultar Nome do Administrador");
+                            Console.WriteLine("1 - Inserir Administrador");
+                            Console.WriteLine("2 - Deletar Administrador");
+                            Console.WriteLine("3 - Atualizar Nome do Administrador");
+                            Console.WriteLine("4 - Consultar Nome do Administrador");
+                            Console.WriteLine("5 - Exibir tabela Administradores");
                             Console.WriteLine("0 - Sair");
 
-                            escolha3 = Convert.ToInt32(Console.ReadLine());
+                            escolha3 = int.Parse(Console.ReadLine());
 
                             switch (escolha3)
                             {
-                                case 17:
+                                case 1:
+                                    Console.Clear();
                                     // Inserção de dados de administrador
                                     DALZoologico.InserirAdministrador();
-                                    //Comandos.InserirAdm();
+                                    Console.ReadKey();
                                     break;
-                                case 18:
+                                case 2:
+                                    Console.Clear();
                                     // Deleção de dados de administrador
                                     DALZoologico.DeletarAdministrador();
-                                    //Comandos.DeletarAdm();
+                                    Console.ReadKey();
                                     break;
-                                case 19:
+                                case 3:
+                                    Console.Clear();
                                     // Atualização de nome de administrador
                                     DALZoologico.AtualizarNomeAdministrador();
-                                    //Comandos.AtualizarAdm();
+                                    Console.ReadKey();
                                     break;
-                                case 20:
+                                case 4:
+                                    Console.Clear();
                                     // Consulta de administradores com parâmetros
                                     DALZoologico.GetAdministradoresComParametro();
-                                    //Comandos.ConsultarAdm();
+                                    Console.ReadKey();
+                                    break;
+                                case 5:
+                                    Console.Clear();
+                                    // Exibir tabela administradores com parâmetros
+                                    Consultas.ConsultarAdm();
+                                    Console.WriteLine("");
+                                    Console.ReadKey();
                                     break;
                                 case 0:
                                     break;
@@ -245,6 +297,7 @@ namespace zoologico
                         break;
 
                     case 0:
+                        Console.Clear();
                         break;
                     default:
                         Console.WriteLine("Opção inválida. Tente novamente.");
