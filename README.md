@@ -1,3 +1,5 @@
+Gestão de Zoológico
+
 Resumo do Código:
 O código fornece uma aplicação de console C# que interage com um banco de dados SQLite para gerenciar informações sobre visitantes, veterinários, administradores e animais em um zoológico.
 
