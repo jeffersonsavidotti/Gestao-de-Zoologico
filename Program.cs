@@ -15,19 +15,6 @@ namespace zoologico
 
                 // Obtendo dados de veterinários do banco de dados
                 dt = DALZoologico.GetVeterinariosDataTable();
-
-                // Loop para iterar sobre as linhas e colunas do DataTable
-                // Comentado para não imprimir os resultados no console
-                /*
-                foreach (DataRow row in dt.Rows)
-                {
-                    foreach (DataColumn col in dt.Columns)
-                    {
-                        Console.WriteLine(col.ColumnName + ": " + row[col]);
-                    }
-                    Console.WriteLine();
-                }
-                */
             }
             catch (Exception ex)
             {
