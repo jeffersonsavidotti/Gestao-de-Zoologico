@@ -15,18 +15,24 @@ namespace zoologico
         {
             try
             {
+                // Exibe um título para a consulta de administradores
                 Console.WriteLine("### TABELA VETERINARIOS ###");
+
+                // Obtém a lista de administradores usando o método GetAdministradoresList da classe DALZoologico
                 List<Veterinario> veterinarios = DALZoologico.GetVeterinariosList();
 
                 // Exibir o cabeçalho da tabela
                 Console.WriteLine("{0, -5} | {1}", "ID", "Nome");
+                // Exibe uma linha horizontal separadora
                 Console.WriteLine(new string('-', 25));
-
+                // Itera sobre a lista de administradores e exibe os detalhes de cada um
                 foreach (Veterinario veterinario in veterinarios)
                 {
                     // Exibir os dados formatados na tabela
                     Console.WriteLine("{0,-10} {1}", veterinario.Id, veterinario.Nome);
                 }
+                Console.WriteLine("");
+                Console.WriteLine("Consulta realizada com sucesso!");
             }
             catch (Exception ex)
             {
@@ -45,17 +51,6 @@ namespace zoologico
                 // Obtém a lista de administradores usando o método GetAdministradoresList da classe DALZoologico
                 List<Administrador> administradores = DALZoologico.GetAdministradoresList();
 
-                // Exibe cabeçalhos para as colunas de dados
-                Console.WriteLine("{0,-10} {1}", "ID", "Nome");
-
-                // Exibe uma linha horizontal separadora
-                Console.WriteLine(new string('-', 22));
-
-                // Itera sobre a lista de administradores e exibe os detalhes de cada um
-                foreach (Administrador administrador in administradores)
-                {
-                    Console.WriteLine("{0,-10} {1}", administrador.Id, administrador.Nome);
-                }
             }
             catch (Exception ex)
             {
@@ -73,18 +68,7 @@ namespace zoologico
 
                 // Obtém a lista de visitantes usando o método GetVisitantesList da classe DALZoologico
                 List<Visitante> visitantes = DALZoologico.GetVisitantesList();
-
-                // Exibe cabeçalhos para as colunas de dados
-                Console.WriteLine("{0,-10} {1}", "ID", "Nome");
-
-                // Exibe uma linha horizontal separadora
-                Console.WriteLine(new string('-', 22));
-
-                // Itera sobre a lista de visitantes e exibe os detalhes de cada um
-                foreach (Visitante visitante in visitantes)
-                {
-                    Console.WriteLine("{0,-10} {1}", visitante.Id, visitante.Nome);
-                }
+              
             }
             catch (Exception ex)
             {
@@ -104,17 +88,6 @@ namespace zoologico
                 // Obtém a lista de animais usando o método GetAnimaisList da classe DALZoologico
                 List<Animal> animais = DALZoologico.GetAnimaisList();
 
-                // Exibe cabeçalhos para as colunas de dados
-                Console.WriteLine("{0,-10} {1,-15} {2}", "ID", "Nome", "Espécie");
-
-                // Exibe uma linha horizontal separadora
-                Console.WriteLine(new string('-', 35));
-
-                // Itera sobre a lista de animais e exibe os detalhes de cada um
-                foreach (Animal animal in animais)
-                {
-                    Console.WriteLine("{0,-10} {1,-15} {2}", animal.Id, animal.Nome, animal.Especie);
-                }
             }
             catch (Exception ex)
             {

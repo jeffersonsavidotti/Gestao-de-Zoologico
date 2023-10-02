@@ -49,6 +49,7 @@ namespace zoologico
 
             while (escolhainicial != 0)
             {
+                Console.Clear();
                 Console.WriteLine("Escolha uma operação:");
                 Console.WriteLine("1 - Veterinários");
                 Console.WriteLine("2 - Animais");

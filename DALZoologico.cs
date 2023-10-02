@@ -1221,7 +1221,7 @@ public static void GetVeterinariosComParametro()
                             if (rowsUpdated > 0)
                             {
                                 Console.WriteLine("Deleção realizada com sucesso!");
-
+                                
                             }
                             else
                             {
