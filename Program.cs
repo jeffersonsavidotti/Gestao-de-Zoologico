@@ -43,8 +43,16 @@ namespace zoologico
                 Console.WriteLine("3 - Visitantes");
                 Console.WriteLine("4 - Administradores");
                 Console.WriteLine("0 - Sair");
-
-                escolhainicial = int.Parse(Console.ReadLine());
+                string input = Console.ReadLine();
+                if (string.IsNullOrEmpty(input))
+                {
+                    Console.WriteLine("Entrada invalida. Tente novamente");
+                    Console.ReadKey();
+                    continue;
+                    
+                }
+                escolhainicial = int.Parse(input);
+                
 
                 switch (escolhainicial)
                 {
@@ -62,9 +70,16 @@ namespace zoologico
                             Console.WriteLine("4 - Consultar Nome do Veterinário");
                             Console.WriteLine("5 - Exibir Tabela Veterinário");
                             Console.WriteLine("0 - Voltar");
+                            string input2 = Console.ReadLine();
+                            if (string.IsNullOrEmpty(input2))
+                            {
+                                Console.WriteLine("Entrada invalida. Tente novamente");
+                                Console.ReadKey();
+                                continue;
 
-                            escolha = int.Parse(Console.ReadLine());
-
+                            }
+                            escolha = int.Parse(input2);
+                            
                             switch (escolha)
                             {
                                 case 1:
@@ -121,8 +136,14 @@ namespace zoologico
                             Console.WriteLine("4 - Consultar Nome do Animal");
                             Console.WriteLine("5 - Exibir tabela Animal");
                             Console.WriteLine("0 - Voltar");
-
-                            escolha1 = int.Parse(Console.ReadLine());
+                            string input2 = Console.ReadLine();
+                            if (string.IsNullOrEmpty(input2))
+                            {
+                                Console.WriteLine("Entrada invalida. Tente novamente");
+                                Console.ReadKey();
+                                continue;
+                            }
+                            escolha1 = int.Parse(input2);
 
                             switch (escolha1)
                             {
@@ -180,8 +201,15 @@ namespace zoologico
                             Console.WriteLine("4 - Consultar Nome do Visitante");
                             Console.WriteLine("5 - Exibir tabela de Visitantes");
                             Console.WriteLine("0 - Voltar");
+                            string input3 = Console.ReadLine();
+                            if (string.IsNullOrEmpty(input3))
+                            {
+                                Console.WriteLine("Entrada invalida. Tente novamente");
+                                Console.ReadKey();
+                                continue;
 
-                            escolha2 = int.Parse(Console.ReadLine());
+                            }
+                            escolha2 = int.Parse(input3);
 
                             switch (escolha2)
                             {
@@ -239,8 +267,15 @@ namespace zoologico
                             Console.WriteLine("4 - Consultar Nome do Administrador");
                             Console.WriteLine("5 - Exibir tabela Administradores");
                             Console.WriteLine("0 - Sair");
+                            string input4 = Console.ReadLine();
+                            if (string.IsNullOrEmpty(input4))
+                            {
+                                Console.WriteLine("Entrada invalida. Tente novamente");
+                                Console.ReadKey();
+                                continue;
 
-                            escolha3 = int.Parse(Console.ReadLine());
+                            }
+                            escolha3 = int.Parse(input4);
 
                             switch (escolha3)
                             {
